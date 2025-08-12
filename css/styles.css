@@ -1,0 +1,209 @@
+:root {
+    --primary-color: #f0f0f0; /* Off-white for high contrast */
+    --secondary-color: #000000; /* Black for a stark, modern look */
+    --accent-color: #d12222; /* A bold red for accents */
+    --heading-font: 'Impact', sans-serif; /* Bold, condensed font */
+    --body-font: 'Arial', sans-serif;
+}
+
+body {
+    font-family: var(--body-font);
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+/* Header & Navigation */
+.header {
+    background-color: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    padding: 10px 0;
+    text-align: center;
+    border-bottom: 3px solid var(--accent-color);
+}
+
+.header nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.header a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.header a:hover {
+    color: var(--accent-color);
+    border-bottom: 2px solid var(--accent-color);
+}
+
+/* Hero Section */
+.hero-section {
+    background-image: url('../images/arctic-monkeys-hero.jpg'); /* You will need to add this image */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.hero-text {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    border-radius: 10px;
+    border: 2px solid var(--accent-color);
+}
+
+.hero-text h1 {
+    font-size: 5em;
+    margin: 0;
+}
+
+/* General Section Styling */
+main section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.band-members {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin: 40px 0;
+}
+
+.member {
+    text-align: center;
+}
+
+.member img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--primary-color);
+    transition: border-color 0.3s ease;
+}
+
+.member img:hover {
+    border-color: var(--accent-color);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    border: 1px solid var(--primary-color);
+    padding: 15px;
+    text-align: left;
+}
+
+th {
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.photo-grid img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border: 2px solid var(--primary-color);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.photo-grid img:hover {
+    transform: scale(1.05);
+    border-color: var(--accent-color);
+}
+
+
+.contact-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.contact-form label {
+    font-weight: bold;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.contact-form textarea {
+    height: 150px;
+}
+
+.contact-form button {
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+    padding: 15px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--secondary-color);
+    border-top: 3px solid var(--accent-color);
+    color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+    .header nav {
+        flex-direction: column;
+        gap: 0;
+    }
+    .header a {
+        padding: 10px;
+    }
+    .hero-text h1 {
+        font-size: 3em;
+    }
+    .band-members {
+        flex-direction: column;
+        align-items: center;
+    }
+}
